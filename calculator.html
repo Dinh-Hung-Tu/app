@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<link rel="shortcut icon" href="../favicon.ico" >
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" title="screen stylesheet" type="text/css" media="screen" href="../style.css" />
+	<script src="calculator.js"></script> 
+	<title>Tu's Studio</title>
+	<style>
+	.button{
+	height:40px; 
+	width:40px;
+	position:relative;
+	left:10px;
+	top:10px;
+	padding: 2px;
+	margin-bottom:5px;
+	}
+
+	</style>
+</head>
+
+<body>
+<div id="contain">
+	<a href="../index.html"> <img src = "../US.png" alt ="English" style = "float:right;width:30px;height:30px"></a>
+	<a href="index.html"> <img src = "../VI.png" alt = "Tiếng Việt" style = "float:right;width:30px;height:30px"></a>
+<div class="title">
+	Tu's Studio
+</div>
+
+<div class="menu">
+	<a href=index.html>Trang chủ</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=index.html>Triển lãm</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=blog.html>Blog</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=aboutme.html>Giới thiệu</a>
+</div>
+
+<div class="bouquet">
+	<div class="hollyhack">
+	<h3>Calculator</h3><br><br>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<form style = "position:relative; left: 30%; width:200px; border-style: solid; border-color: #98bf21;line-height: 1.6em">
+	<div class="display"><input type="text" readonly size="20" id="screen" style = "text-align:right; height:30px; position:relative; left:15px; top:5px; 	margin-bottom:15px;"></div>
+	<div style = "position:relative;left:5px">
+		<input type="button" class = "button" value="C" id="7" onclick="reset();">  <input type="button" class = "button" value="MR" id="8" onclick="m_recall();">  <input type="button" class = "button" value="M+" id="9" onclick="m_add();">  <input type="button" class = "button" value="*" id="mul" onclick="append('*');"><br>
+		<input type="button" class = "button" value="7" id="7" onclick="append('7');">  <input type="button" class = "button" value="8" id="8" onclick="append('8');">  <input type="button" class = "button" value="9" id="9" onclick="append('9');">  <input type="button" class = "button" value="/" id="div" onclick="append('/');"><br>		
+		<input type="button" class = "button" value="4" id="4" onclick="append('4');">  <input type="button" class = "button" value="5" id="5" onclick="append('5');">  <input type="button" class = "button" value="6" id="6" onclick="append('6');">  <input type="button" class = "button" value="+" id="add" onclick="append('+');"><br>
+		<input type="button" class = "button" value="1" id="1" onclick="append('1');">  <input type="button" class = "button" value="2" id="2" onclick="append('2');">  <input type="button" class = "button" value="3" id="3" onclick="append('3');">  <input type="button" class = "button" value="-" id="sub" onclick="append('-');"><br>
+		<input type="button" class = "button" value="0" id="0" onclick="append('0');">  <input type="button" class = "button" value="." id="dot" onclick="append('.');">  <input type="button" class = "button" value="=" id="equal" onclick="get_result();" style = "width:85px">
+	</div>
+	<br></form>
+	<br>
+	</div>
+</div>
+</div>
+<div class="footer">
+  <a href="aboutme.html#copyright" target="_blank">&#169 Copyright <span class = logo> Tu's Studio</span> </a>
+  </br>
+  </br>  
+</div>
+</div>
+</body>
+</html>
