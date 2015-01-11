@@ -141,7 +141,10 @@ function checkKey(e) {
 	else if (keycode == 110 || keycode == 190) append("."); //decimal 
 	else if (keycode == 111 || keycode == 191) append("/"); //
 	else if (keycode == 13) get_result(); //Enter
-	else if (keycode == 8) clear_last(); //Backspace
+	else if (keycode == 8) { //Backspace
+	clear_last(); 
+	e.preventDefault();
+	}
 }
 function clear_last()
 {
