@@ -5,17 +5,20 @@
 //to fix: fix the display of text, try to get the text scroll. If possible make two lines Make the screen is immutable.
 var clear = true;
 var mr = 0;
-var operator = ["+","-","*","/"];
+var operator = ["+","-","x","/"];
 	
   function c(val) //Clear and replace by val
-  {
-      document.getElementById("screen").value=val;	  
+  {	
+      document.getElementById("screen").value=val;	  	  
   }
   function append(val) //Append val to the end
   {
-      if (clear == true) {
+      if (clear == true ) {		//In clear screen
+		if (val != "x" && val != "/") {
+
 	  c(val); //From clear state -> register first value	  
 	  clear = false;
+}
 	  }	  
 	  else
 	  {
@@ -49,7 +52,7 @@ var operator = ["+","-","*","/"];
 		}
 		result = eval(char_set.join(""));
         c(result.toString());
-		clear = true;
+		//clear = true;
       } 
       catch(e) 
       {
@@ -80,12 +83,14 @@ var operator = ["+","-","*","/"];
 		clear = true;
       } 
   }
-  function reset() //reset everything (screen value and memory)
+  function reset1() //reset everything (screen value and memory)
   {
-	c();
-	mr = 0;
+	console.log("Reset");
+	c("");	
+	clear = true;
   }
-  function toggle() //toggle the sign
+
+function toggle() //toggle the sign
   {
 	var current_display = document.getElementById("screen").value;
 	var char_set = current_display.split('');
@@ -104,7 +109,8 @@ var operator = ["+","-","*","/"];
 	}
 	document.getElementById("screen").value = char_set.join("");
   }
-  function m_clear()
+
+function m_clear() //Clear memory
   {
 		mr = 0;
   }
