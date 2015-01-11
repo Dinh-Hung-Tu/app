@@ -4,8 +4,7 @@
 <head>
 	<link rel="shortcut icon" href="../favicon.ico" >
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" title="screen stylesheet" type="text/css" media="screen" href="../style.css" />
-	<script src="calculator.js"></script> 
+	<link rel="stylesheet" title="screen stylesheet" type="text/css" media="screen" href="../style.css" />	
 	<title>Tu's Studio</title>
 	<style>
 	.button{
@@ -43,19 +42,19 @@
 	<div style = "position:relative;left:5px">
 	<table style = "table-layout: fixed; width: 200px;">	
 	<tr><td colspan = "4">
-	<input type="text" id="screen" size = '6' style = "text-align:right; height:50px; position:relative; top:5px; font-weight: bold; font-size: 35px; margin-bottom:20px;">
+	<input type="text" id="screen" size = '6' disabled = "disabled" style = "overflow:auto; text-align:right; height:50px; position:relative; top:5px; font-weight: bold; font-size: 35px; margin-bottom:20px;">
 	</td></tr>
 	
 	<tr>
     <td><input type="button" class = "button" value="MC" id="8" onclick="m_clear();"></td>
     <td><input type="button" class = "button" value="MR" id="8" onclick="m_recall();"></td>		
     <td><input type="button" class = "button" value="M+" id="9" onclick="m_add('+');"></td>
-    <td><input type="button" class = "button" value="M-" id="9" onclick="m_add('-');"></td>
+    <td><input type="button" class = "button" value="&#x21e6;" id="9" onclick="clear_last();"></td>
   </tr>
   <tr>
     <td><input type="button" class = "button" value="C" id="C" onclick="reset();"></td>
-    <td><input type="button" class = "button" value="+/-" id="tg" onclick="toggle();"></td>		
-    <td><input type="button" class = "button" value="*" id="mul" onclick="append('*');"></td>
+    <td><input type="button" class = "button" value="&plusmn;" id="tg" onclick="toggle();"></td>		
+    <td><input type="button" class = "button" value="&#215;" id="mul" onclick="append('x');"></td>
 	<td><input type="button" class = "button" value="/" id="div" onclick="append('/');"></td>
   </tr>
   <tr>
@@ -68,7 +67,7 @@
     <td><input type="button" class = "button" value="4" id="4" onclick="append('4');"></td>
     <td><input type="button" class = "button" value="5" id="5" onclick="append('5');"></td>		
     <td><input type="button" class = "button" value="6" id="6" onclick="append('6');"></td>
-    <td><input type="button" class = "button" value="-" id="sub" onclick="append('-');"></td>
+    <td><input type="button" class = "button" value="&#8722;" id="sub" onclick="append('-');"></td>
   </tr>
   <tr>
     <td><input type="button" class = "button" value="1" id="1" onclick="append('1');"></td>
@@ -77,7 +76,7 @@
     <td rowspan = "2"><input type="button" class = "button" value="=" id="equal" onclick="get_result();" style = "height:70px"></td>
   </tr>
   <tr>
-    <td colspan = "2"><input type="button" class = "button" value="0" id="0" onclick="append('0');" style = "width:85px"></td>
+    <td colspan = "2"><input type="button" class = "button" value="0" id="0" onclick="append('0');" style = "width:90px"></td>
     <td><input type="button" class = "button" value="." id="dot" onclick="append('.');"></td>		
   </tr>
 </table>
@@ -94,5 +93,6 @@
   </br>  
 </div>
 </div>
+<script src="calculator.js"></script> 
 </body>
 </html>
