@@ -135,7 +135,7 @@ function checkKey(e) {
 		var digit = keycode - 96;
 		append(digit.toString());
 	}	
-	else if (keycode == 106) append("*"); //
+	else if (keycode == 106) append("x"); //
 	else if (keycode == 107 || keycode == 187) append("+"); //
 	else if (keycode == 109 || keycode == 189) append("-"); //
 	else if (keycode == 110 || keycode == 190) append("."); //decimal 
