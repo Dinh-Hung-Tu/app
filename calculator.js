@@ -151,11 +151,12 @@ function checkKey(e) {
 }
 function clear_last()
 {
-	var current_display = document.getElementById("screen").value;
-	var char_set = current_display.split('');
-	char_set.pop();
-	if (char_set != "") {document.getElementById("screen").value = char_set.join("");
-	}
-	else {clear = true;
+	if (clear == false)
+	{
+		var current_display = document.getElementById("screen").value;
+		var char_set = current_display.split('');
+		char_set.pop();
+		document.getElementById("screen").value = char_set.join("");
+		if (char_set == "") clear = true;
 	}
 }
